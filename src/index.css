@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+
+  --Lightred-work: hsl(15, 100%, 70%);
+  --Softblue: hsl(195, 74%, 62%);
+  --Lightred-study: hsl(348, 100%, 68%);
+  --Lime-green: hsl(145, 58%, 55%);
+  --Violet: hsl(264, 64%, 52%);
+  --Soft-orange: hsl(43, 84%, 65%);
+
+  --Verydark-blue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+}
+
+body {
+  @apply bg-[var(--Verydark-blue)] w-full h-screen grid place-content-center;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.cards-container {
+  @apply grid md:place-content-center h-screen w-full md:grid-cols-[repeat(4,250px)] md:grid-rows-[repeat(2,200px)] md:gap-6  gap-8 grid-cols-1  p-6;
+}
+
+#Work,
+.Work {
+  @apply bg-[var(--Lightred-work)];
+}
+#Play,
+.Play {
+  @apply bg-[var(--Softblue)];
+}
+#Study,
+.Study {
+  @apply bg-[var(--Lightred-study)];
+}
+#Exercise,
+.Exercise {
+  @apply bg-[var(--Lime-green)];
+}
+#Social,
+.Social {
+  @apply bg-[var(--Violet)];
+}
+#Self-Care,
+.Self-Care {
+  @apply bg-[var(--Soft-orange)];
+}
